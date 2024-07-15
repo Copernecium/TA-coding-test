@@ -15,9 +15,7 @@ def wowza(input_here):
     splitword = input_here.split(" ")
     
     #step 5 making summary of all / สร้างค่าไว้เก็บราคาทุกประเภท
-    summary_not_ness = 0
-    summary_ness = 0
-    notincatalog = 0
+    summary_not_ness = summary_ness = notincatalog = 0
     
     #step 6 making loop of list / สร้าง loop อิงตามรายการที่เราแยกมา โดยค่าที่รับจะอยู่ใน i
     for i in splitword:
