@@ -1,7 +1,9 @@
 def wowza(input_here):
     if type(input_here) != list:
-        return print("input is not list\n"
-              +"==========================================================================")
+        return print("input is not list")
+    for i in input_here:
+        if type(i) != str and type(i) != list:
+            return print("input inside is not list or string")
     
     necessary = {'Noodle_cup':20, 'Fried_egg':24, 'Pad_thai':40, 'Krapao_extra':50, 'water':6}
     not_necessary = {'Chocolate':22, 'Pepsi':18, 'Lemon_tea':15}
@@ -29,7 +31,7 @@ def wowza(input_here):
                 notincatalog+=1
     print("necessary :",summary_ness,"Baht"+"\n"+"not necessary :",summary_not_ness,"Baht\n"+"total :",summary_ness+summary_not_ness,"Baht")
     if notincatalog != 0:
-        print("there is" ,notincatalog, "thing not in catalog\n"+"==========================================================================")
+        print("there is" ,notincatalog, "thing not in catalog\n")
     
 #wowza(["apple orange apple","1234",['apple',1,5210],['orange',2,8216],'orange'])
 wowza(["Noodle_cup Pepsi Fried_egg Soda", "water Chocolate", ["Coke",2,20], "Krapao_extra Lemon_tea Coke", ["Soda",2,15]])
