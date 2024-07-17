@@ -33,8 +33,8 @@ def wowza(input_here):
     print("necessary :",summary_ness,"Baht"+"\n"+"not necessary :",summary_not_ness,"Baht\n"+"total :",summary_ness+summary_not_ness,"Baht")
     if notincatalog != 0:
         print("there is" ,notincatalog, "thing not in catalog")
-    print("\n")
+    return [summary_ness,summary_not_ness,summary_ness+summary_not_ness,notincatalog]
     
-#wowza(["apple orange apple","1234",['apple',1,5210],['orange',2,8216],'orange'])
-wowza(["Noodle_cup Pepsi Fried_egg Soda", "water Chocolate", ["Coke",2,20], "Krapao_extra Lemon_tea Coke", ["Soda",2,15]])
-wowza(["Noodle_cup Pepsi Fried_egg”, “water Chocolate”, “Krapao_extra Lemon_tea Coke"])
+print(wowza(["Noodle_cup Pepsi Fried_egg", "water Chocolate", "Krapao_extra Lemon_tea Coke"]))
+print(wowza(["Noodle_cup Pepsi Fried_egg Soda", "water Chocolate", ["Coke",2,20], "Krapao_extra Lemon_tea Coke", ["Soda",2,15]]))
+print(wowza(["Noodle_cup Pepsi Fried_egg”, “water Chocolate”, “Krapao_extra Lemon_tea Coke"]))
