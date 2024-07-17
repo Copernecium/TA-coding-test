@@ -2,7 +2,7 @@
 def is_anagram(input_here):
     
     #step 2 checking input if there is not 2 value inside or not lsit / เช็คข้อมูลที่รับมาว่ามีมากกว่าสองตัวหรือไม่ใช่ประเภท list
-    if len(input_here) != 2 or type(input_here) != list:
+    if len(input_here) != 2 or type(input_here) != list or type(input_here[0]) != str or type(input_here[1] != str):
         return 
     
     #step 3 convert into set and get only alphabet / เปลี่ยนค่าที่รับมาให้เป็น set แล้วเอาแต่ตัวอักษร

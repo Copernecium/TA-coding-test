@@ -2,8 +2,10 @@ def wowza(input_here):
     if type(input_here) != list:
         return print("input is not list\n"
               +"==========================================================================")
+    
     necessary = {'Noodle_cup':20, 'Fried_egg':24, 'Pad_thai':40, 'Krapao_extra':50, 'water':6}
     not_necessary = {'Chocolate':22, 'Pepsi':18, 'Lemon_tea':15}
+    
     itemtoremove = []
     for i in input_here:
         if type(i) == list:
@@ -14,6 +16,7 @@ def wowza(input_here):
             itemtoremove.append(i)
     for i in itemtoremove:
         input_here.remove(i)
+
     summary_not_ness = summary_ness = notincatalog = 0
     for wordsplit in input_here:
         splitword = wordsplit.split(" ")
