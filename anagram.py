@@ -2,7 +2,7 @@
 def is_anagram(input_here):
     
     #step 2 checking input if there is not 2 value inside or not lsit / เช็คข้อมูลที่รับมาว่ามีมากกว่าสองตัวหรือไม่ใช่ประเภท list
-    if len(input_here) != 2 or type(input_here) != list or type(input_here[0]) != str or type(input_here[1] != str):
+    if len(input_here) != 2 or type(input_here) != list:
         return 
     
     #step 3 convert into set and get only alphabet / เปลี่ยนค่าที่รับมาให้เป็น set แล้วเอาแต่ตัวอักษร
@@ -10,10 +10,7 @@ def is_anagram(input_here):
     convert2 = set(x for x in input_here[1] if x.isalpha())
     
     #step 4 checking if it is the match one / เช็คข้อมูลของ set ทั้งสองตัวว่าตรงกันไหม แล้วส่งค่าเป็น boolean
-    if convert1 == convert2:
-        return True
-    else:
-        return False
+    return (convert1==convert2)
     
 #step 5 using funtion to test / ใช้ function เต็มเพื่อ test
 print(is_anagram(["listen","silent"]))
